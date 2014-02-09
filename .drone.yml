@@ -6,6 +6,8 @@ script:
   - sleep 10
   - test -d /tmp && echo '/tmp exists'
   - sleep 10
+  - test -d /srv && echo '/srv exists'
+  - sleep 10
   - echo finished.
 notify:
   email:
