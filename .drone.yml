@@ -3,8 +3,6 @@ script:
   - git --version
   - echo test
   - sleep 3
-  - echo yay
-  - sleep 3
   - test -d /tmp && echo '/tmp exists'
   - sleep 3
   - test -d /srv && echo '/srv exists'
