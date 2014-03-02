@@ -1,17 +1,23 @@
 image: fudanchii/base
 script:
   - echo test
-  - sleep 10
+  - sleep 3
   - echo yay
-  - sleep 10
+  - sleep 3
   - test -d /tmp && echo '/tmp exists'
-  - sleep 10
+  - sleep 3
   - test -d /srv && echo '/srv exists'
-  - sleep 10
+  - sleep 3
   - /sbin/ifconfig
-  - sleep 10
+  - sleep 3
   - echo finished.
+  - cat $0
 notify:
   email:
     recipients:
       - nurahmadie@gmail.com
+deploy:
+  ssh:
+    target: {{ssh_host}} {{ssh_port}}
+    branch: master
+    cmd: ls -lahF
