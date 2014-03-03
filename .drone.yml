@@ -16,4 +16,4 @@ deploy:
   ssh:
     target: {{ssh_host}} {{ssh_port}}
     branch: master
-    cmd: ls -lahF $HOME
+    cmd: sar
