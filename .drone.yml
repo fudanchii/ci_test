@@ -10,6 +10,7 @@ script:
   - sleep 3
   - echo finished.
   - cat $0
+  - git log --graph --oneline
 notify:
   email:
     recipients:
@@ -18,4 +19,4 @@ deploy:
   ssh:
     target: {{ssh_host}} {{ssh_port}}
     branch: master
-    cmd: sar
+    cmd: ls -lahF ~
